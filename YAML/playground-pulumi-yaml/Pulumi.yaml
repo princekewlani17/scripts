@@ -1,0 +1,14 @@
+name: playground-pulumi-yaml
+description: A minimal AWS Pulumi YAML program
+runtime: yaml
+resources:
+  # Create an AWS resource (S3 Bucket)
+  pk-pulumi-bucket-yaml:
+    type: aws:s3:BucketV2
+outputs:
+  # Export the name of the bucket
+  bucketName: ${pk-pulumi-bucket-yaml.id}
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-yaml

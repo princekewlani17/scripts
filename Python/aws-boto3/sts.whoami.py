@@ -3,7 +3,7 @@
 import sys
 from aws_session import AwsSession
 
-aws = AwsSession()
+aws = AwsSession(profile='princekewlani')
 
 
 def lambda_handler(event, context):

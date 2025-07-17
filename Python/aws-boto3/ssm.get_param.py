@@ -2,7 +2,7 @@
 
 from aws_session import AwsSession
 
-aws = AwsSession(profile='princekewlani')
+aws = AwsSession(profile='princekewlani', region='ap-south-1')
 
 
 def lambda_handler(event, context):

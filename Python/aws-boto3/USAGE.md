@@ -9,7 +9,8 @@ $ cat *.py # script
 ```python3
     from aws_session import AwsSession
 
-    aws = AwsSession(profile=profile_name)
+    aws = AwsSession(profile=profile_name,
+                     region=region_name)
     aws.get(service='s3').boto3_api_call(**args)
 
 ```
@@ -18,11 +19,13 @@ $ cat *.py # script
 
 2. Exporting default
 ```sh
-bash export AWS_DEFAULT_PROFILE=profile_name
+export AWS_DEFAULT_PROFILE=profile_name
+export AWS_DEFAULT_REGION=region_name
+
 ```
 `or`
 ```sh
-bash aws configure
+aws configure
 ```
 ```sh
 $cat *.py # script
